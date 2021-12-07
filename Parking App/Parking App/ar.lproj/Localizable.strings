@@ -1,0 +1,17 @@
+/* 
+  Localization.strings
+  Parking App
+
+  Created by PC on 03/05/1443 AH.
+  
+*/
+"Parkings App" = "تطبيق مواقف" ;
+"MyPark" = "موقفي" ;
+"High City" = " المدينة العاليه " ;
+"Airport Garden" = "حديقة المطار";
+"Abha View" =  "ابها فيو" ;
+"Exit" = "خروج" ;
+"CarNumber" = "رقم السيارة" ;
+"CarType" = "نوع السيارة" ;
+"confirm" = "تأكيد" ;
+

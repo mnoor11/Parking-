@@ -72,7 +72,7 @@ class MyReservationVC: UIViewController {
     
     let parkingExitButton : UIButton = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setTitle("خروج", for: .normal)
+        $0.setTitle(NSLocalizedString("Exit", comment: "") , for: .normal)
         $0.tintColor = .white
         $0.backgroundColor = UIColor.red.withAlphaComponent(0.5)
         $0.titleLabel?.font = UIFont.boldSystemFont(ofSize: 23)

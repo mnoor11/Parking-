@@ -61,7 +61,7 @@ class MainVC : UIViewController {
     
     let titleLabel : UILabel = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.text = "موقفي"
+        $0.text = (NSLocalizedString("MyPark", comment: ""))
         $0.font = UIFont.boldSystemFont(ofSize: 30)
         $0.textAlignment = .center
         $0.textColor = .white
@@ -78,7 +78,7 @@ class MainVC : UIViewController {
     
     
     let highCityButton : customButton = {
-        $0.setTitle("المدينة العالية", for: .normal)
+        $0.setTitle(NSLocalizedString("High City", comment: "") , for: .normal)
         $0.tag = 10
         $0.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
         return $0
@@ -86,7 +86,7 @@ class MainVC : UIViewController {
     
     
     let airportGarder : customButton = {
-        $0.setTitle("حديقة المطار", for: .normal)
+        $0.setTitle(NSLocalizedString("Airport Garden", comment: "") , for: .normal)
         $0.tag = 20
         $0.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
         return $0
@@ -94,8 +94,9 @@ class MainVC : UIViewController {
     
     
     let abhaViewButton : customButton = {
-        $0.setTitle("أبها فيو", for: .normal)
+        
         $0.tag = 30
+        $0.setTitle(NSLocalizedString("Abha View", comment: "") , for: .normal)
         $0.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
         return $0
     }(customButton(type: .system))

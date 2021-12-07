@@ -71,12 +71,12 @@ class ReservationVC: UIViewController {
     }(UIStackView(arrangedSubviews: [self.carNumberView, self.carTypeView, self.signupButton]))
     
     let carNumberView : CustomTextFieldView = {
-        $0.textField.placeholder = "رقم السيارة"
+        $0.textField.placeholder = (NSLocalizedString("CarNumber", comment: ""))
         return $0
     }(CustomTextFieldView())
     
     let carTypeView : CustomTextFieldView = {
-        $0.textField.placeholder = "نوع السيارة"
+        $0.textField.placeholder = "CarType"
         return $0
     }(CustomTextFieldView())
    
@@ -84,7 +84,7 @@ class ReservationVC: UIViewController {
     
     let signupButton : customButton = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setTitle("تأكيد", for: .normal)
+        $0.setTitle(NSLocalizedString("confirm", comment: "") , for: .normal)
         $0.addTarget(self, action: #selector(newReservationAction), for: .touchUpInside)
         return $0
     }(customButton(type: .system))

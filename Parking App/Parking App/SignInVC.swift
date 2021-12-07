@@ -25,7 +25,7 @@ class SignInVC: UIViewController {
     
     let appNameLabel : UILabel = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.text = "Parkings App"
+        $0.text = (NSLocalizedString("Parkings App", comment: ""))
         $0.font = UIFont.boldSystemFont(ofSize: 30)
         $0.textColor = .init(white: 0.95, alpha: 0.8)
         $0.textAlignment = .center
@@ -42,11 +42,13 @@ class SignInVC: UIViewController {
     
     let emailView : CustomTextFieldView = {
         $0.textField.placeholder = "email"
+        $0.textField.text = "M@m.com"
         return $0
     }(CustomTextFieldView())
     
     let passwordView : CustomTextFieldView = {
         $0.textField.placeholder = "password"
+        $0.textField.text = "123123"
         $0.textField.isSecureTextEntry = true
         return $0
     }(CustomTextFieldView())
