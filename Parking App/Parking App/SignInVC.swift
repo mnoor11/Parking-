@@ -5,6 +5,7 @@
 //  Created by PC on 20/04/1443 AH.
 //
 
+
 import UIKit
 import Firebase
 
@@ -25,7 +26,7 @@ class SignInVC: UIViewController {
     
     let appNameLabel : UILabel = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.text = (NSLocalizedString("Parkings App", comment: ""))
+        $0.text = NSLocalizedString("My Parking", comment: "")
         $0.font = UIFont.boldSystemFont(ofSize: 30)
         $0.textColor = .init(white: 0.95, alpha: 0.8)
         $0.textAlignment = .center
@@ -41,14 +42,12 @@ class SignInVC: UIViewController {
     }(UIStackView(arrangedSubviews: [self.emailView, self.passwordView, self.signInButton, self.signupButton]))
     
     let emailView : CustomTextFieldView = {
-        $0.textField.placeholder = "email"
-        $0.textField.text = "M@m.com"
+        $0.textField.placeholder = NSLocalizedString("email", comment: "")
         return $0
     }(CustomTextFieldView())
     
     let passwordView : CustomTextFieldView = {
-        $0.textField.placeholder = "password"
-        $0.textField.text = "123123"
+        $0.textField.placeholder = NSLocalizedString("password", comment: "")
         $0.textField.isSecureTextEntry = true
         return $0
     }(CustomTextFieldView())
@@ -56,7 +55,7 @@ class SignInVC: UIViewController {
     
     let signInButton : customButton = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setTitle("Sign In", for: .normal)
+        $0.setTitle(NSLocalizedString("Sign In", comment: ""), for: .normal)
         $0.addTarget(self, action: #selector(signInButtonAction), for: .touchUpInside)
         return $0
     }(customButton(type: .system))
@@ -100,7 +99,7 @@ class SignInVC: UIViewController {
     
     let signupButton : UIButton = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setTitle("Don't have an account ? Sign UP", for: .normal)
+        $0.setTitle(NSLocalizedString("Don't have an account ? Sign UP", comment: ""), for: .normal)
         $0.layer.cornerRadius = 20
         $0.tintColor = .init(white: 0.95, alpha: 0.8)
         $0.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)

@@ -51,28 +51,28 @@ class MyReservationVC: UIViewController {
     
     let carNumberLebel : UILabel = {
         $0.font = UIFont.boldSystemFont(ofSize: 16)
-        $0.textAlignment = .right
+//        $0.textAlignment = .right
         $0.textColor = .darkGray
         return $0
     }(UILabel())
 
     let carTypeLabel : UILabel = {
         $0.font = UIFont.boldSystemFont(ofSize: 16)
-        $0.textAlignment = .right
+//        $0.textAlignment = .right
         $0.textColor = .darkGray
         return $0
     }(UILabel())
     
     let dateLebel : UILabel = {
         $0.font = UIFont.boldSystemFont(ofSize: 16)
-        $0.textAlignment = .right
+//        $0.textAlignment = .right
         $0.textColor = .darkGray
         return $0
     }(UILabel())
     
     let parkingExitButton : UIButton = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setTitle(NSLocalizedString("Exit", comment: "") , for: .normal)
+        $0.setTitle(NSLocalizedString("Exit", comment: ""), for: .normal)
         $0.tintColor = .white
         $0.backgroundColor = UIColor.red.withAlphaComponent(0.5)
         $0.titleLabel?.font = UIFont.boldSystemFont(ofSize: 23)
@@ -97,13 +97,13 @@ class MyReservationVC: UIViewController {
         
         durationHours += 1
         
-        durationLabel.text = "\(durationHours) Hours"
+        durationLabel.text = "\(durationHours) " + NSLocalizedString("Hours", comment: "")
         
         
         let hourPrice = 20
         let totalPrice = durationHours * hourPrice
         
-        priceLabel.text = "\(totalPrice) SR"
+        priceLabel.text = "\(totalPrice) " + NSLocalizedString("SR", comment: "")
         
         guard let id = Auth.auth().currentUser?.uid else {return}
         
@@ -113,8 +113,8 @@ class MyReservationVC: UIViewController {
                 containerView.addSubview(priceStackView)
                 containerView.addSubview(enteringAndExitStackView)
                 
-                enteringDateLabel.text = "Enter : \(enteingDateString)"
-                exitDateLabel.text = "Exit : \(exitDateString)"
+                enteringDateLabel.text = NSLocalizedString("Enter", comment: "") + " : \(enteingDateString)"
+                exitDateLabel.text = NSLocalizedString("Exit", comment: "") + " : \(exitDateString)"
                 
                 NSLayoutConstraint.activate([
                     barcodeImageView.topAnchor.constraint(equalTo: locationNameLebel.bottomAnchor, constant: 20),
@@ -229,16 +229,16 @@ class MyReservationVC: UIViewController {
                     ])
                     
                     
-                    self.carNumberLebel.text = "رقم السيارة : \(data["carNumber"] as! String)"
-                    self.carTypeLabel.text = "نوع السيارة : \(data["carType"] as! String)"
-                    self.dateLebel.text = "الوقت : \(data["time"] as! String)"
-                    self.locationNameLebel.text = data["locationAR"] as? String
+                    self.carNumberLebel.text = NSLocalizedString("Car Number", comment: "") + " : \(data["carNumber"] as! String)"
+                    self.carTypeLabel.text = NSLocalizedString("Car Type" , comment: "") + " : \(data["carType"] as! String)"
+                    self.dateLebel.text = NSLocalizedString("Date", comment: "") + " : \(data["time"] as! String)"
+                    self.locationNameLebel.text = data["location"] as? String
                     self.enteingDateString = (data["time"] as? String)!
                 } else {
-                    print("Nothing yet")
+                    
                     let noReservationLabel = UILabel()
                     noReservationLabel.frame = view.bounds
-                    noReservationLabel.text = "No Parkings Found"
+                    noReservationLabel.text = NSLocalizedString("No Parkings Found", comment: "")
                     noReservationLabel.textAlignment = .center
                     noReservationLabel.font = UIFont.boldSystemFont(ofSize: 18)
                     noReservationLabel.textColor = .init(white: 0.95, alpha: 0.8)

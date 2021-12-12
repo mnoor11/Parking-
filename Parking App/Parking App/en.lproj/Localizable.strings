@@ -5,13 +5,35 @@
   Created by PC on 03/05/1443 AH.
   
 */
-"Parkings App" = "Parkings App" ;
-"MyPark" = "MyPark";
-"High City" = "High City" ;
-"High City" = "High City" ;
+
+// SignInVC
+"My Parking" = "My Parking";
+"email" = "email";
+"password" = "password";
+"Sign In" = "Sign In";
+"Don't have an account ? Sign UP" = "Don't have an account ? Sign UP";
+
+// SignUpVC
+"name" = "name";
+"Sign Up" = "Sign Up";
+
+// MainVC
+"High City" = "High City";
 "Airport Garden" = "Airport Garden";
-"Abha View" = "Abha View" ;
-"Exit" = "Exit" ;
-"CarNumber" = "CarNumber";
-"CarType" = "CarType" ;
-"confirm" =  "confirm" ;
+"Abha View" = "Abha View";
+//"There is no ‼️" = "There is no ‼️";
+
+//ReservationVC
+"Car Number" = "Car Number";
+"Car Type" = "Car Type";
+"Confirm" = "Confirm";
+
+// MyReservationVC
+"No Parkings Found" = "No Parkings Found";
+"Date" = "Date";
+"Enter" = "Enter";
+"Exit" = "Exit";
+"Hours" = "Hours";
+"SR" = "SR";
+
+

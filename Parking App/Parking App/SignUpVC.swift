@@ -38,17 +38,17 @@ class SignUpVC: UIViewController {
     }(UIStackView(arrangedSubviews: [self.nameView, self.emailView, self.passwordView, self.signupButton]))
     
     let nameView : CustomTextFieldView = {
-        $0.textField.placeholder = "name"
+        $0.textField.placeholder = NSLocalizedString("name", comment: "")
         return $0
     }(CustomTextFieldView())
     
     let emailView : CustomTextFieldView = {
-        $0.textField.placeholder = "email"
+        $0.textField.placeholder = NSLocalizedString("email", comment: "")
         return $0
     }(CustomTextFieldView())
     
     let passwordView : CustomTextFieldView = {
-        $0.textField.placeholder = "password"
+        $0.textField.placeholder = NSLocalizedString("password", comment: "")
         $0.textField.isSecureTextEntry = true
         return $0
     }(CustomTextFieldView())
@@ -56,7 +56,7 @@ class SignUpVC: UIViewController {
     
     let signupButton : customButton = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setTitle("Sign Up", for: .normal)
+        $0.setTitle(NSLocalizedString("Sign Up", comment: ""), for: .normal)
         $0.addTarget(self, action: #selector(signupAction), for: .touchUpInside)
         return $0
     }(customButton(type: .system))
@@ -116,6 +116,8 @@ class SignUpVC: UIViewController {
                             }
                         }
                     }
+                } else {
+                    // show error message
                 }
             }
         }

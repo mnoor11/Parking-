@@ -4,14 +4,12 @@
 //
 //  Created by PC  on 20/04/1443 AH.
 //
-
 import UIKit
 import Firebase
 
 class ReservationVC: UIViewController {
     
     var locationName = String()
-    var locationNameArabic = String()
     var parkingsCount = Int()
     
     var reservesParkings = 0
@@ -54,7 +52,7 @@ class ReservationVC: UIViewController {
     
     lazy var locationNameLabel : UILabel = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.text = locationNameArabic + " - \(parkingsCount)"
+        $0.text = locationName + " - \(parkingsCount)"
         $0.textAlignment = .right
         $0.font = UIFont.boldSystemFont(ofSize: 28)
         $0.textColor = .darkGray
@@ -71,12 +69,12 @@ class ReservationVC: UIViewController {
     }(UIStackView(arrangedSubviews: [self.carNumberView, self.carTypeView, self.signupButton]))
     
     let carNumberView : CustomTextFieldView = {
-        $0.textField.placeholder = (NSLocalizedString("CarNumber", comment: ""))
+        $0.textField.placeholder = NSLocalizedString("Car Number", comment: "")
         return $0
     }(CustomTextFieldView())
     
     let carTypeView : CustomTextFieldView = {
-        $0.textField.placeholder = "CarType"
+        $0.textField.placeholder = NSLocalizedString("Car Type", comment: "")
         return $0
     }(CustomTextFieldView())
    
@@ -84,7 +82,7 @@ class ReservationVC: UIViewController {
     
     let signupButton : customButton = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setTitle(NSLocalizedString("confirm", comment: "") , for: .normal)
+        $0.setTitle(NSLocalizedString("Confirm", comment: ""), for: .normal)
         $0.addTarget(self, action: #selector(newReservationAction), for: .touchUpInside)
         return $0
     }(customButton(type: .system))
@@ -126,7 +124,6 @@ class ReservationVC: UIViewController {
                 "carType" : carTypeView.textField.text!,
                 "time" : stringDate,
                 "location" : locationName,
-                "locationAR" : locationNameArabic
 
             ]) { error in
                 if error == nil {

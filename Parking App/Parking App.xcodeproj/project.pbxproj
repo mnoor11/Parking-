@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		049692732765D54F00A5DE27 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049692722765D54F00A5DE27 /* LocationCell.swift */; };
 		04E5DA5B275F6DD200FE6D62 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04E5DA5D275F6DD200FE6D62 /* Localizable.strings */; };
 		10472598275015D4001A424C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 10472597275015D4001A424C /* GoogleService-Info.plist */; };
 		1047259A27501804001A424C /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1047259927501804001A424C /* MainVC.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		049692722765D54F00A5DE27 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		04E5DA58275F6CB400FE6D62 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		04E5DA5C275F6DD200FE6D62 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		04E5DA5E275F6DD400FE6D62 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				10FFEA5827569CF500E7868D /* TabBarController.swift */,
 				1047259D275028B9001A424C /* CustomTextFieldView.swift */,
 				10DB7B5127541496009C5A93 /* LogninValidationVC.swift */,
+				049692722765D54F00A5DE27 /* LocationCell.swift */,
 				04E5DA5D275F6DD200FE6D62 /* Localizable.strings */,
 				10F584762750101F00A55B7B /* SignInVC.swift */,
 				10F584862750115C00A55B7B /* SignUpVC.swift */,
@@ -245,6 +248,7 @@
 				10F584872750115C00A55B7B /* SignUpVC.swift in Sources */,
 				10FFEA5927569CF500E7868D /* TabBarController.swift in Sources */,
 				1047259C275024C3001A424C /* ReservationVC.swift in Sources */,
+				049692732765D54F00A5DE27 /* LocationCell.swift in Sources */,
 				1047259A27501804001A424C /* MainVC.swift in Sources */,
 				106C16542752BE610072E0BF /* MyReservationVC.swift in Sources */,
 				10DEAA8327516EB60099CCF7 /* Extensions.swift in Sources */,

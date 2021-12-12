@@ -12,7 +12,6 @@ class LogninValidationVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.backgroundColor = .white
 
         setGradientBackground()
         
