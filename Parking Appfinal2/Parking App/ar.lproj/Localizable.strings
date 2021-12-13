@@ -1,0 +1,43 @@
+/* 
+  string.strings
+  Parking App
+
+  Created by PC on 06/05/1443 AH.
+  
+*/
+
+// SignInVC
+"My Parking" = "موقفي";
+"email" = "البريد الالكتروني";
+"password" = "كلمة المرور";
+"Sign In" = "تسجيل الدخول";
+"Don't have an account ? Sign UP" = "ليس لديك حساب ؟ سجل الآن";
+
+// SignUpVC
+"name" = "الاسم";
+"Sign Up" = "تسجيل";
+
+// MainVC
+"High City" = "المدينة العالية";
+"Airport Garden" = "حديقة المطار";
+"Abha View" = "أبها فيو";
+
+//ReservationVC
+"Car Number" = "رقم السيارة";
+"Car Type" = "نوع السيارة";
+"Confirm" = "تأكيد";
+
+// MyReservationVC
+"No Parkings Found" = "لا يوجد مواقف مسجله";
+"Date" = "الوقت";
+"Enter" = "دخول";
+"Exit" = "خروج";
+"Hours" = "ساعة";
+"SR" = "ريال";
+
+// Alert
+"Ok" = "تم";
+"Bad Creditial" = "البريد الالكتروني او الرقم السري غير صحيح";
+"Error" = "خطأ";
+"Unkown Error" = "خطأ غير معروف";
+"sorry, parkings full" = "عذرا، لا توجد مواقف شاغرة";
