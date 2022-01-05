@@ -1,10 +1,4 @@
 //
-//  ReservationVC.swift
-//  Parking App
-//
-//  Created by  on 20/04/1443 AH.
-//
-
 import UIKit
 import Firebase
 
@@ -23,9 +17,13 @@ class ReservationVC: UIViewController {
     
     var timer = Timer()
     var animationIndex = 1
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.isUserInteractionEnabled = true
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(labelTapped)))
         
         switch locationIndex {
         case 0 :
@@ -107,7 +105,7 @@ class ReservationVC: UIViewController {
         $0.text = locationName + " - \(parkingsCount)"
         $0.textAlignment = .right
         $0.font = UIFont.boldSystemFont(ofSize: 28)
-        $0.textColor = .darkGray
+        $0.textColor = Colors.titles
         return $0
     }(UILabel())
     
@@ -245,4 +243,24 @@ extension ReservationVC : UICollectionViewDelegate, UICollectionViewDataSource {
         return cell
     }
    
+}
+
+
+extension ReservationVC {
+    @objc func labelTapped(_ sender : UITapGestureRecognizer) {
+       let locationTapped = sender.location(in: view)
+       let tapAnimationView = UIView(frame: CGRect(x: locationTapped.x, y: locationTapped.y, width: 30, height: 30))
+       tapAnimationView.layer.cornerRadius = 15
+       tapAnimationView.backgroundColor = UIColor.white.withAlphaComponent(0.1)
+       tapAnimationView.transform = CGAffineTransform(scaleX: 0, y: 0)
+       view.addSubview(tapAnimationView)
+       
+       UIView.animate(withDuration: 0.3, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut) {
+           tapAnimationView.transform = CGAffineTransform.identity
+       }
+       
+       DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+           tapAnimationView.removeFromSuperview()
+       }
+   }
 }

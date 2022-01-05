@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04F349C527857AFD00A26A63 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F349C427857AFD00A26A63 /* Color.swift */; };
 		10175400276697A70078131E /* LocationImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101753FF276697A70078131E /* LocationImageCell.swift */; };
 		10472598275015D4001A424C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 10472597275015D4001A424C /* GoogleService-Info.plist */; };
 		1047259A27501804001A424C /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1047259927501804001A424C /* MainVC.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04F349C427857AFD00A26A63 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		101753FF276697A70078131E /* LocationImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationImageCell.swift; sourceTree = "<group>"; };
 		10472597275015D4001A424C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1047259927501804001A424C /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				10BF6C9F2763F47E005FD5D1 /* Model.swift */,
+				04F349C427857AFD00A26A63 /* Color.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				10F584872750115C00A55B7B /* SignUpVC.swift in Sources */,
 				10FFEA5927569CF500E7868D /* TabBarController.swift in Sources */,
 				1047259C275024C3001A424C /* ReservationVC.swift in Sources */,
+				04F349C527857AFD00A26A63 /* Color.swift in Sources */,
 				10BF6C972763E58D005FD5D1 /* LocationCell.swift in Sources */,
 				1047259A27501804001A424C /* MainVC.swift in Sources */,
 				10BF6CA02763F47E005FD5D1 /* Model.swift in Sources */,
