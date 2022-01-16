@@ -41,24 +41,14 @@ class MainVC : UIViewController {
         let myReservationButton = UIBarButtonItem(image : UIImage(systemName: "rectangle.trailinghalf.inset.filled.arrow.trailing"), style: .plain, target: self, action: #selector(reservationAction))
         myReservationButton.tintColor = .darkGray
         navigationItem.rightBarButtonItem = myReservationButton
-        
-        let signOutButton = UIBarButtonItem(image: UIImage(systemName: "power.circle"), style: .plain, target: self, action: #selector(signoutAction))
-        signOutButton.tintColor = .red
-        navigationItem.leftBarButtonItem = signOutButton
+
     }
     
     @objc func reservationAction() {
         self.navigationController?.pushViewController(MyReservationVC(), animated: true)
     }
     
-    @objc func signoutAction() {
-        try? Auth.auth().signOut()
-        
-        let vc = UINavigationController(rootViewController: SignInVC())
-        vc.modalTransitionStyle = .crossDissolve
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
-    }
+    
     
     let titleLabel : UILabel = {
         $0.translatesAutoresizingMaskIntoConstraints = false

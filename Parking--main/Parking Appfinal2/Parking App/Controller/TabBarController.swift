@@ -23,6 +23,7 @@ class TabBarController: UITabBarController {
     func setupVCs() {
         viewControllers = [
             createNavController(for: MainVC(), title: "", image: UIImage(systemName: "person")!),
+            createNavController(for: UserProfileVC(), title: "", image: UIImage(systemName: "person")!),
             createNavController(for: MapVC(), title: "", image: UIImage(systemName: "calendar.circle")!)
         ]
     }

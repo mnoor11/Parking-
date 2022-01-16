@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04D4819F2793672B005BDDA3 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D4819E2793672A005BDDA3 /* UserProfileVC.swift */; };
 		04F349C527857AFD00A26A63 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F349C427857AFD00A26A63 /* Color.swift */; };
 		10175400276697A70078131E /* LocationImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101753FF276697A70078131E /* LocationImageCell.swift */; };
 		10472598275015D4001A424C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 10472597275015D4001A424C /* GoogleService-Info.plist */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04D4819E2793672A005BDDA3 /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 		04F349C427857AFD00A26A63 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		101753FF276697A70078131E /* LocationImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationImageCell.swift; sourceTree = "<group>"; };
 		10472597275015D4001A424C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				10F584862750115C00A55B7B /* SignUpVC.swift */,
 				1047259927501804001A424C /* MainVC.swift */,
 				10FFEA5A27569D1E00E7868D /* MapVC.swift */,
+				04D4819E2793672A005BDDA3 /* UserProfileVC.swift */,
 				1047259B275024C3001A424C /* ReservationVC.swift */,
 				106C16532752BE610072E0BF /* MyReservationVC.swift */,
 			);
@@ -299,6 +302,7 @@
 				10F584772750101F00A55B7B /* SignInVC.swift in Sources */,
 				10175400276697A70078131E /* LocationImageCell.swift in Sources */,
 				10F584732750101F00A55B7B /* AppDelegate.swift in Sources */,
+				04D4819F2793672B005BDDA3 /* UserProfileVC.swift in Sources */,
 				10F584752750101F00A55B7B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

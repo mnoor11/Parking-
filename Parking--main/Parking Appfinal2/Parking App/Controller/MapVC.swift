@@ -20,9 +20,11 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         super.viewDidLoad()
 
         view.addSubview(mapView)
+        mapView.delegate = self
         
         for i in self.locations {
             let annotation = MKPointAnnotation()
+            annotation.title = i.locationName
             annotation.coordinate = CLLocationCoordinate2D(latitude: i.latitude , longitude: i.longitude)
                 self.annotations.append(annotation)
                 self.mapView.addAnnotations(self.annotations)
@@ -57,6 +59,23 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         return annotationView
     }
     
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        let annotation = view.annotation //as? Location
+//        print(annotation?.title)
+        guard let latitude = annotation?.coordinate.latitude, let longitude = annotation?.coordinate.longitude else {return}
+              
+        if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
+            UIApplication.shared.openURL(URL(string:"comgooglemaps://?saddr=&daddr=\(latitude),\(longitude)&directionsmode=driving")!)
+            
+        } else {
+//            NSLog("Can't use comgooglemaps://");
+            if let urlDestination = URL.init(string: "https://www.google.co.in/maps/dir/?saddr=&daddr=\(latitude),\(longitude)&directionsmode=driving") {
+                UIApplication.shared.open(urlDestination)
+            }
+        }
+                  
+    }
     
 
 }
